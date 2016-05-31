@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: lillypiri_development
+
+test:
+  <<: *default
+  database: lillypiri_test
+
+production:
+  <<: *default
+  database: lillypiri_production
+  username: lillypiri
+  password: <%= ENV['LILLYPIRI_DATABASE_PASSWORD'] %>

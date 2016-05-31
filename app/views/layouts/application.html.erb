@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lilly Piri</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <meta content='width=device-width, minimum-scale=1.0, maximum-scale=1.0' name='viewport' />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="menu">
+                    <div class="profile">
+                        <h1>
+                            <%= link_to root_path do %>
+                                <%= image_tag 'profile.jpg', class: 'img-responsive' %>
+                                Lilly Piri
+                            <% end %>
+                        </h1>
+                        <div class="bio">
+                            Lilly Piri is an artist based on the Gold Coast, Australia
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <ul>
+                            <li><%= link_to 'Etsy', 'https://www.etsy.com/au/shop/lillypiri' %></li>
+                            <li><%= link_to 'eBay', 'http://www.ebay.com.au/sch/theshakinbrave/m.html' %></li>
+                            <li><%= link_to 'Instagram', 'https://instagram.com/lillypiri' %></li>
+                            <li><%= link_to 'Patreon', 'https://www.patreon.com/lillypiri' %></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
