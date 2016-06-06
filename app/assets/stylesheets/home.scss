@@ -1,9 +1,9 @@
 .menu {
   padding-top: 10px;
-  
+
   .profile {
     margin-bottom: 20px;
-    
+
     img {
       max-width: 70%;
       display: block;
@@ -12,17 +12,17 @@
       border: 10px solid white;
       box-shadow: 0 5px 10px rgba(0,0,0,0.3);
       transition: all 0.2s ease;
-      
+
       &:hover {
         transform: rotate(3deg);
       }
     }
-    
+
     h1 {
       text-align: center;
       font-size: 25px;
       font-weight: normal;
-      
+
       a {
         color: black;
         &:hover {
@@ -30,30 +30,49 @@
         }
       }
     }
-    
+
     .bio {
       color: #999;
       text-align: center;
     }
   }
-  
+
   .links {
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-    
+
     li {
       text-align: center;
     }
-    
+
     a {
       color: black;
-      
+
       &:hover {
         text-decoration: underline;
       }
     }
+  }
+}
+
+h2 {
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
+
+.grid {
+  width: 250px;
+  .cell {
+    width: 80px;
+    display: inline-block;
   }
 }

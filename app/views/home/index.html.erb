@@ -2,8 +2,11 @@
 <%= render 'section', title: 'Daily Painting Project', photos: @photos.tagged('lillypiripaints') %>
 <%= render 'section', title: 'Still Life', photos: @photos.tagged('lillypiristilllife') %>
 
-<h1>Shop</h1>
-<% @items.all.each do |item| %>
-  <%= item.title %>
-  <%= link_to image_tag(item.image_url, class: 'img-responsive'), item.external_url %>
-<% end %>
+<h2><a href="https://lillypiri.etsy.com">Shop</a></h2>
+<div class="grid">
+  <% @items.all.each do |item| %>
+    <div class="cell">
+      <%= link_to image_tag(item.image_url, class: 'img-responsive'), item.external_url %>
+    </div>
+  <% end %>
+</div>
