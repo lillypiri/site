@@ -1,10 +1,13 @@
+$font:  'Montserrat', sans-serif;
+
+
 .menu {
   padding-top: 10px;
 
   .profile {
     margin-bottom: 20px;
 
-    img {
+    img.wiggley {
       max-width: 70%;
       display: block;
       margin: auto;
@@ -12,6 +15,7 @@
       border: 10px solid white;
       box-shadow: 0 5px 10px rgba(0,0,0,0.3);
       transition: all 0.2s ease;
+
 
       &:hover {
         transform: rotate(3deg);
@@ -22,9 +26,11 @@
       text-align: center;
       font-size: 25px;
       font-weight: normal;
+      font-family: $font;
+      text-transform: uppercase;
 
       a {
-        color: black;
+        color: #484848;
         &:hover {
           text-decoration: none;
         }
@@ -34,6 +40,8 @@
     .bio {
       color: #999;
       text-align: center;
+      text-transform: uppercase;
+      font-family: $font;
     }
   }
 
@@ -49,7 +57,9 @@
     }
 
     a {
-      color: black;
+      color: #484848;
+      text-transform: uppercase;
+      font-family: $font;
 
       &:hover {
         text-decoration: underline;
@@ -59,12 +69,16 @@
 }
 
 h2 {
+  font-family: $font;
+  color: #484848;
+  font-size: 18px;
+  text-transform: uppercase;
   a {
-    color: black;
+    color: #484848;
 
     &:hover {
       text-decoration: underline;
-      color: black;
+      color: #ff9bd6;
     }
   }
 }
