@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
     @photos = Photo
-    @items = ShopItem
+    @items = ShopItem.sample(9)
   end
 end

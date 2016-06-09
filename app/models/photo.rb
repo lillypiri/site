@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  default_scope -> { order('posted_at desc') }
+  default_scope -> { where('posted_at is not null').order('posted_at desc') }
   
   
   def self.tagged (tag)
