@@ -4,7 +4,7 @@
 
 <h2><a href="https://lillypiri.etsy.com">Shop</a></h2>
 <div class="grid">
-  <% @items.all.each do |item| %>
+  <% @items.each do |item| %>
     <div class="cell">
       <%= link_to image_tag(item.image_url, class: 'img-responsive'), item.external_url %>
     </div>
