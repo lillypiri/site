@@ -34,9 +34,9 @@ namespace :instagram do
   
   desc "Update"
   task update: :environment do
-    photo = Photo.where(instagram_id: nil).first
+    photos = Photo.unscoped.where('instagram_id is null').limit(5)
     
-    if photo
+    photos.each do |photo|
       begin
         content = open(photo.external_url).read
         
