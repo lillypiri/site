@@ -1,6 +1,6 @@
-<%= render 'section', title: 'News', photos: @photos.tagged('lillypirinews') %>
-<%= render 'section', title: 'Daily Painting Projects', photos: @photos.tagged('lillypiripaints') %>
-<%= render 'section', title: 'Still Life', photos: @photos.tagged('lillypiristilllife') %>
+<%= render 'section', title: 'News', photos: @photos, tag: "lillypirinews" %>
+<%= render 'section', title: 'Daily Painting Projects', photos: @photos, tag: "lillypiripaints" %>
+<%= render 'section', title: 'Still Life', photos: @photos, tag: "lillypiristilllife" %>
 
 <h2><a href="https://lillypiri.etsy.com">Shop</a></h2>
 <div class="grid">

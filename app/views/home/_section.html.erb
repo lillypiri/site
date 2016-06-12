@@ -2,13 +2,13 @@
   <h2><%= title %></h2>
 
   <div class="row">
-    <% photos.limit(3).each do |photo| %>
+    <% photos.tagged(tag).limit(3).each do |photo| %>
       <div class="col-sm-3">
         <%= image_tag photo.image_url, class: 'img-responsive' %>
       </div>
     <% end %>
     <div class="col-sm-3 more">
-      <%= link_to image_tag("more.png", class: 'img-responsive'), tag_path("lillypiripaints") %>
+      <%= link_to image_tag("more.png", class: 'img-responsive'), tag_path(tag) %>
     </div>
   </div>
 
