@@ -1,0 +1,14 @@
+<div class="tags">
+  <div class="section">
+    <h2><%= @title %></h2>
+
+    <div class="row">
+      <% @photos.each do |photo| %>
+        <div class="col-sm-3">
+          <%= image_tag photo.image_url, class: 'img-responsive' %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
