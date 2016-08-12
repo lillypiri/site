@@ -37,6 +37,7 @@
       }
     }
 
+
     .bio {
       color: #999;
       text-align: center;
@@ -60,9 +61,11 @@
       color: #484848;
       text-transform: uppercase;
       font-family: $font;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
         color: #ff9bd6;
       }
     }
