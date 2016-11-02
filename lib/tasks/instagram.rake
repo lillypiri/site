@@ -34,7 +34,7 @@ namespace :instagram do
   
   desc "Update"
   task update: :environment do
-    photos = Photo.unscoped.where('instagram_id is null').limit(5)
+    photos = Photo.unscoped.where('instagram_id is null').order('created_at').limit(5)
     
     photos.each do |photo|
       begin
