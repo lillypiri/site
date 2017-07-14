@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -25,11 +24,10 @@ ActiveRecord::Schema.define(version: 20160531004357) do
     t.string   "external_url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["instagram_id"], name: "index_photos_on_instagram_id", using: :btree
+    t.index ["posted_at"], name: "index_photos_on_posted_at", using: :btree
+    t.index ["tags"], name: "index_photos_on_tags", using: :btree
   end
-
-  add_index "photos", ["instagram_id"], name: "index_photos_on_instagram_id", using: :btree
-  add_index "photos", ["posted_at"], name: "index_photos_on_posted_at", using: :btree
-  add_index "photos", ["tags"], name: "index_photos_on_tags", using: :btree
 
   create_table "shop_items", force: :cascade do |t|
     t.string   "external_url"
@@ -40,10 +38,9 @@ ActiveRecord::Schema.define(version: 20160531004357) do
     t.string   "image_url"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
+    t.index ["etsy_id"], name: "index_shop_items_on_etsy_id", using: :btree
+    t.index ["price"], name: "index_shop_items_on_price", using: :btree
+    t.index ["title"], name: "index_shop_items_on_title", using: :btree
   end
-
-  add_index "shop_items", ["etsy_id"], name: "index_shop_items_on_etsy_id", using: :btree
-  add_index "shop_items", ["price"], name: "index_shop_items_on_price", using: :btree
-  add_index "shop_items", ["title"], name: "index_shop_items_on_title", using: :btree
 
 end
